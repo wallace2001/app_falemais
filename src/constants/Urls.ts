@@ -1,0 +1,1 @@
+export const IMAGE_URL = "https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_720,h_440/https://www.srzd.com/wp-content/uploads/2018/07/Nomofobia-720x480-720x440.jpg";

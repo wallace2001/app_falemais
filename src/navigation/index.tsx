@@ -66,29 +66,17 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabOne"
         component={Home}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        options={({
+          headerShown: false,
           title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Modal')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
         })}
       />
       <BottomTab.Screen
         name="TabTwo"
         component={Plans}
         options={{
+          headerShown: false,
           title: 'Planos',
           tabBarIcon: ({ color }) => <TabBarIcon name="paperclip" color={color} />,
         }}
@@ -97,6 +85,7 @@ function BottomTabNavigator() {
         name="TabThree"
         component={Simulator}
         options={{
+          headerShown: false,
           title: 'Simulador',
           tabBarIcon: ({ color }) => <TabBarIcon name="calculator" color={color} />,
         }}
